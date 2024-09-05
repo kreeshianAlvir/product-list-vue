@@ -9,7 +9,7 @@ defineProps(['name', 'image', 'category', 'price', 'quantity', 'orderConfirmed']
 <template>
   <div class="product" :class="{ selected: orderConfirmed && quantity > 0 }">
     <div class="product_image-container">
-      <img :src="image" alt="first image" class="image" />
+      <img :src="image" :alt="name" class="image" />
       <div v-if="quantity !== 0" class="btn-item-added">
         <DecrementIcon @click="$emit('updateCart', name, 'reduce')" />
         <h3>{{ quantity }}</h3>
