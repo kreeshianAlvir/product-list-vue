@@ -15,7 +15,8 @@
   .product {
     width: var(--product-item-width);
     &_image-container {
-      width: var(--product-item-width);
+      // width: var(--product-item-width);
+      width: 100%;
       height: var(--product-item-height);
       position: relative;
       display: flex;
