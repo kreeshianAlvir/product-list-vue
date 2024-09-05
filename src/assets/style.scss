@@ -5,6 +5,7 @@
 [class*='section-header'] {
   font-weight: bold;
   margin-bottom: 20px;
+  color: var(--rose-900);
 }
 
 .product-list {
@@ -13,9 +14,7 @@
   gap: 20px;
 
   .product {
-    // width: var(--product-item-width);
     &_image-container {
-      // width: var(--product-item-width);
       width: 100%;
       height: var(--product-item-height);
       position: relative;
@@ -29,7 +28,6 @@
 
       @mixin btn-style {
         font-family: var(--font-family);
-        font-weight: 400;
         border: 1px solid var(--btn-add-color);
         border-radius: 40px;
         position: absolute;
@@ -48,6 +46,11 @@
         background-color: #fff;
         cursor: pointer;
         font-size: 0.7rem;
+        color: var(--rose-900);
+
+        & .btn-text {
+          font-weight: 500;
+        }
 
         :hover {
           color: var(--btn-add-color);
@@ -85,6 +88,11 @@
       .name {
         font-weight: bold;
         font-size: 1rem;
+      }
+
+      .name,
+      .category {
+        color: var(--rose-900);
       }
 
       .price {
@@ -209,6 +217,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  p {
+    color: var(--rose-500);
+    font-weight: 400;
+  }
 }
 
 @mixin backdrop {
@@ -231,6 +244,11 @@
     margin: var(--dialog-margin);
     border-radius: 10px;
     padding: 15px;
+
+    .title,
+    .subtitle {
+      color: var(--rose-900);
+    }
 
     .order-list-total {
       background-color: var(--background);
@@ -303,6 +321,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .label-price {
+          color: var(--rose-900);
+        }
 
         p:last-child {
           font-weight: bold;

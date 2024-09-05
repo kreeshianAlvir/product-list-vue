@@ -12,12 +12,12 @@ defineProps(['name', 'image', 'category', 'price', 'quantity', 'orderConfirmed']
       <img :src="image" :alt="name" class="image" />
       <div v-if="quantity !== 0" class="btn-item-added">
         <DecrementIcon @click="$emit('updateCart', name, 'reduce')" />
-        <h3>{{ quantity }}</h3>
+        <h3 class="btn-text">{{ quantity }}</h3>
         <IncrementIcon @click="$emit('updateCart', name, 'add')" />
       </div>
       <div v-else class="btn-add" @click="$emit('updateCart', name, 'add')">
         <img :src="AddToCartImage" alt="Add To Cart Icon" />
-        <h3>Add to Cart</h3>
+        <h3 class="btn-text">Add to Cart</h3>
       </div>
     </div>
     <div class="product_details">

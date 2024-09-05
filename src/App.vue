@@ -157,8 +157,8 @@ watch(FoodList, () => {
   <div v-if="orderConfirmed" class="dialog-backdrop">
     <div class="dialog">
       <IconOrderConfirmed />
-      <h1>Order Confirmed</h1>
-      <p>We hope you enjoy your food!</p>
+      <h1 class="title">Order Confirmed</h1>
+      <p class="subtitle">We hope you enjoy your food!</p>
       <div class="order-list-total">
         <div class="confirmed-order-list">
           <ConfirmedItems
@@ -170,7 +170,7 @@ watch(FoodList, () => {
           />
         </div>
         <div class="confirmed-price-total">
-          <p>Order Total</p>
+          <p class="label-price">Order Total</p>
           <p>${{ totalPrice }}</p>
         </div>
       </div>
